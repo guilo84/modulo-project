@@ -15,22 +15,37 @@ def choose_integers():
     return choose_integers.integer_one, choose_integers.integer_two
 
 def operation(int_one,int_two):
-    choice = input("Do you want to add, multiply, or exponent? ")
-    if choice == "add":
+    choice = input("Do you want to 1.) add, 2.) multiply, or 3. raise to an exponent? ")
+    if choice == "1":
         return int_one + int_two
-    elif choice == "multiply":
+    elif choice == "2":
         return int_one * int_two
-    elif choice == "exponent":
+    elif choice == "3":
         return int_one ** int_two
     else:
         print("No input")
+
+def divisibility(value):
+    if value % 6 == 0:
+        return "six"
+    elif value % 9 == 0:
+        return "nine"
+    elif value % 3  == 1:
+        return "post"
+    elif value % 3  == 2:
+        return "pre"
+    elif value % 3 == 0:
+        return "triNum"
 
 
 choose_integers()
 int_one = choose_integers.integer_one
 int_two = choose_integers.integer_two
-print(int_one)
-print(int_two)
 result = operation(int_one, int_two)
-print(result)
-print(digitsum(result))
+
+
+print("The first integer",int_one," is a",divisibility(int_one))
+print("The second integer",int_two," is a",divisibility(int_two))
+print("The result of the operation is",result)
+print("The ulitmate sum of all digits is", digitsum(result))
+print("The number",digitsum(result), "is a",divisibility(digitsum(result)))
