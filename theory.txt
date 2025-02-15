@@ -1,0 +1,19 @@
+This is the basis for a theorem which relates to the numbers divisible by 3, 6, and 9 and those adjacent to them.
+The definitions are as follows:
+  TriNums == numbers divisible by 3, 6, or 9
+    sub-class γ == numbers divisible by 3
+    sub-class ζ == number divisible by 6
+    sub-class ι == numbers divisible by 9
+  α == numbers which come after a 3, 6, or 9
+  β == numbers which come before a 3, 6, or 9
+
+The following are a set of rules which are demonstrable at small numbers. The purpose of this pythons script is to test at scale:
+## γ==3, ζ==6, ι==9, α==post, β==pre
+any α + α = β
+any α * α = α
+any β + β = α
+any β * β = α
+any α * γ = γ
+any β * γ = ζ
+any α * ζ = ζ
+any β * ζ = γ
