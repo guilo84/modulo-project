@@ -7,7 +7,7 @@ def digitsum(n):
         n = sum(int(digit) for digit in str(n))
     return n
 
-def choose_integers():
+def choose_integers(): #this will choose your two integers
     choose_integers.integer_one = int(input("What is the first integer? "))
     choose_integers.integer_two = int(input("What is the second integer? "))
     # one = choose_integers.integer_one
