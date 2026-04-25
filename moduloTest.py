@@ -26,9 +26,9 @@ def operation(int_one,int_two):
         print("No input")
 
 def divisibility(value):
-    if value % 6 == 0:
+    if value % 9 == 0:
         return "six"
-    elif value % 9 == 0:
+    elif value % 6 == 0:
         return "nine"
     elif value % 3  == 1:
         return "post"
